@@ -1,0 +1,52 @@
+\documentclass[10pt,landscape,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+%\usepackage[LY1,T1]{fontenc}
+%\usepackage{frutigernext}
+%\usepackage[lf,minionint]{MinionPro}
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning,arrows,fit,calc,graphs,graphs.standard}
+\usepackage[nosf]{kpfonts}
+\usepackage[t1]{sourcesanspro}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage[top=5mm,bottom=5mm,left=5mm,right=5mm]{geometry}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{microtype}
+\usepackage{pdfpages}
+
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{minted} % for code blocks
+
+\let\bar\overline
+
+\include{content/def}
+
+\begin{document}
+\footnotesize
+% \small
+\begin{multicols*}{5}
+\input{content/logik}
+\input{content/assembler}
+\input{content/groessen}
+\input{content/binaer}
+\input{content/hex}
+\input{content/lokalitaet}
+\input{content/speicherallokation}
+\input{content/c_language}
+\input{content/cache}
+\input{content/virtueller_speicher}
+\input{content/verdraenungsstrategie}
+% \input{content/aussagen}
+% \input{content/mengen}
+% \input{content/relationen}
+% \input{content/abbildungen}
+% \input{content/beweise} 
+% \input{content/graphen}
+% \input{content/graphalgo}
+% \input{content/bool}
+% \input{content/formeln}
+\end{multicols*}
+\end{document}

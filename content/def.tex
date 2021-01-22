@@ -1,4 +1,6 @@
 \definecolor{myblue}{cmyk}{1,.72,0,.38}
+\definecolor{myheaderblue}{cmyk}{75, .50, 0, .50}
+\definecolor{mathcolor}{cmyk}{100, 0, .50, .25}
 
 \def\firstcircle{(0,0) circle (1.5cm)}
 \def\secondcircle{(0:2cm) circle (1.5cm)}
@@ -12,10 +14,10 @@
 \pgfdeclarelayer{background}
 \pgfsetlayers{background,main}
 
-\everymath\expandafter{\the\everymath \color{myblue}}
+\everymath\expandafter{\the\everymath \color{mathcolor}}
 \everydisplay\expandafter{\the\everydisplay \color{myblue}}
 
-\renewcommand{\baselinestretch}{.8}
+\renewcommand{\baselinestretch}{.4}
 \pagestyle{empty}
 
 \global\mdfdefinestyle{header}{%
@@ -27,8 +29,8 @@ leftmargin=0mm,rightmargin=0mm,skipbelow=0mm,skipabove=0mm,
 \begin{mdframed}[style=header]
 \footnotesize
 \sffamily
-Hilfszettel zur Klausur\\
-von~Tim~S.,~Seite~\thepage~von~2
+Spick für Betriebsysteme 1\\
+von~Janosch~Bühler,~Seite~\thepage~von~2
 \end{mdframed}
 }
 
@@ -36,7 +38,7 @@ von~Tim~S.,~Seite~\thepage~von~2
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
                                 {.2ex}%
                                 {.2ex}%x
-                                {\color{myblue}\sffamily\small\bfseries}}
+                                {\color{myheaderblue}\sffamily\small\bfseries}}
 \renewcommand{\subsection}{\@startsection{subsection}{1}{0mm}%
                                 {.2ex}%
                                 {.2ex}%x
