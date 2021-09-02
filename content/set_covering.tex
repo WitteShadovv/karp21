@@ -1,0 +1,15 @@
+\section{Set-Covering}
+
+Auf einem weit entfernten, aber technologisch sehr fortgeschrittenen Planeten wird der den Planeten regierende Ältestenrat nicht durch Volkswahl bestimmt, sondern durch einen Algorithmus. In der Vergangenheit gab es eine grosse Zahl rivalisierender Stämme, die sich auch zu grösseren “Nationen” verbündet haben und wiederholt blutige Kriege gegeneinander geführt haben. Um diesem Unheil ein Ende zu setzen, kamen die Stämme überein, den Ältestenrat zu bilden, in dem wenn auch nicht jeder Stamm direkt, so doch mindestens das “Blut” jedes Stammes vertreten sein musste. Damit trug man der Tatsache Rechnung, dass Mobiltät und planetenweiter Handel mittlerweile zu einer weitgehenden Durchmischung in der Bevölkerung geführt hatte. Ausgeprägtes Traditionsbewusstsein hatten jedoch sichergestellt, dass von jedem Bürger bekannt war, aus welchen Stämmen er “Blut” in sich trug. Warum ist trotzdem eine weit entwickelte Technologie nötig, um herauszufinden, ob sich ein Ältestenrat mit k Mitgliedern überhaupt bilden lässt?
+
+Das Problem, einen Ältestenrat mit \textbf{k} Mitgliedern zu bilden, ist äquivalent zum Set-Covering Problem. Zu jedem Bürger \textbf{i} ist die Menge \textbf{$S_i$} aller Stämme bekannt, von denen er “Blut” in sich trägt. Die Vereinigung aller $S_i$ ist die Menge \textbf{U} aller Stämme. Gefragt wird jetzt nach k Bürgern $i_1, ... , i_k$ so, dass die $S_{i_{1}}, ... S_{i_{k}}$ bereits alle Stämme abdecken, also:
+
+$$\bigcup_{i} S_i = U$$
+
+Die Übersetzung von Set-Covering auf des Ältestenratsproblem ist also:
+\begin{itemize}
+\item $U$ $\leftrightarrow$ Menge aller Stämme
+\item $i$ $\leftrightarrow$ Bürger
+\item $S_i$ $\leftrightarrow$ Menge der Stämme, die durch i vertreten werden können
+\item Unterfamilie $\leftrightarrow$ Ältestenrat
+\end{itemize}

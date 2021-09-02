@@ -1,0 +1,13 @@
+\section{Partition}
+
+Ein aufstrebendes Film-Festival ist derart gewachsen, dass der Vorführsaal nicht mehr reicht. Daher müssen jetzt zwei gleich grosse Säle verwendet werden, und trotzdem ist das Festival wieder ausverkauft, und zwar in einem Masse, dass überhaupt nur Stars und Prominente samt ihrer Entourage eingelassen werden können, für einzelne Besucher gibt es keine Plätze. Doch die Stars stören sich daran, dass sie möglicherweise nicht ihre ganze Entourage im gleichen Saal haben können. Daher muss kurzfristig eine Aufteilung der Festival-Gäste gefunden werden, so dass die beiden Säle so gefüllt werden können, dass jede Entourage vollständig in einem der Säle Platz nimmt. Der Festival-Direktor ist jedoch sehr überrascht, dass die Bestimmung einer solchen Aufteilung so lange dauert. Warum sind Sie nicht überrascht?
+
+\textbf{Lösung}. Zu jedem Star $i ∈ I$ gibt es eine Entourage mit $c_i$ Mitgliedern. Diese Menge muss jetzt
+in zwei Teilmengen $A$ (Stars samt Entourage, die in Saal A Platz nehmen) und $B$ (Stars samt
+Entourage, die in Saal B Platz nehmen) aufgeteilt werden, so dass $I = A ∪ B$. Die Aufteilung
+muss so sein, dass in beiden Sälen gleich viele Leute Platz nehmen, also:
+
+$$\Sigma_{i\in A} c_i = \Sigma_{i \in B} c_i$$
+
+
+Dies ist das Problem PARTITION. Das gestellte Problem ist also äquivalent zum NP-vollständigen Problem PARTITION, und ist daher ebenfalls NP-vollständig. Man kann daher nach aktuellem Wissen nicht erwarten, dass es dafür einen effizienten Algorithmus gibt.

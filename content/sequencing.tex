@@ -1,0 +1,15 @@
+\section{Sequencing}
+
+Die Prüfungsvorbereitungszeit ist intensiv, manchmal reicht die Zeit nicht, alle Prüfungen vorzubereiten, bis die Prüfungssession beginnt. Es ist daher unumgänglich, während der Prüfungssession weiter zu lernen. Nehmen wir an, dass für die Vorbereitung der $p$ Fächer $1,..., p$ die Vorbereitungszeiten $t_1 , ... , t_p$ notwendig sind. Ebenfalls bekannt ist, dass die Prüfungen zu den Zeiten $d_1 , . . . , d_p$ stattfinden, dann muss die Vorbereitung abgeschlossen sein, weil die Prüfung sonst nicht zu bestehen ist. Es stellt sich daher die Frage, in welcher Reihenfolge die Vorbereitungen durchgeführt werden sollen, damit höchstens k Prüfungen nicht bestanden werden. Ein Student, der AutoSpr nicht besucht hat, wendet viel Zeit dafür auf herauszufinden, ob es überheupt eine Reihenfolge dieser Art gibt, versteht aber nicht, warum dies so aufwendig ist. Können Sie dies erklären?
+
+\textbf{Lösung}. Das vorliegende Problem ist das Problem SEQUENCING, welches bekanntermassen
+NP-vollständig ist.
+
+\begin{itemize}
+\item Job $i$ $\leftrightarrow$ Vorbereitung für Fach $i$
+\item Ausführungszeit $t_i$ $\leftrightarrow$ Vorbereitungszeit $t_i$
+\item Deadline $d_i$ $\leftrightarrow$ Prüfungszeitpunkt $d_i$
+\end{itemize}
+
+
+Die Strafe für eine nicht bestandene Prüfung ist $s_1 = . . .= s_p = 1$, die Reihenfolge muss so gewählt werden, dass die Gesamtstrafe ≤ $k$ ist.

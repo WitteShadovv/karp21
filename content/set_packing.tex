@@ -1,0 +1,25 @@
+\section{Set-Packing}
+Für eine medizinische Studie ist eine grosse Zahl von Probanden rekrutiert worden. Sie sind bereits auf Allergien getestet worden, man weiss also von jedem Probanden, auf welche Allergene (Pollen, Katzenhaare, Hausstaub, Lactose,. . . ) er allergisch reagiert. Die Untersuchung soll sich auf eine Teilmenge von k = 17 oder noch mehr ausgewählten Allergenen beschränken, die so beschaffen ist, dass kein Proband auf mehr als eines der ausgewählten Allergene reagiert. Es stellt sich als schwierig heraus, eine solche Teilmenge zu finden. Warum?
+
+\textbf{Lösung} Dies ist das Problem SET-PACKING, wenn man folgende Identifikation vornimmt:
+
+Allergene $\leftrightarrow$ I
+auf Allergen i allergische Probanden $\leftrightarrow$ Si 
+ausgewählte Allergene $\leftrightarrow$ J
+Ausschlussbedingung zwischen Allergenen i und j $\leftrightarrow$ Si $\cap$ Sj = ∅
+
+Es wird verlangt, k Allergene auszuwählen, also eine Teilmenge J $\subset$ I mit |J| = k zu finden.
+
+\subsection{Mögliche Veranstaltungen mit möglichen Aktivitäten}
+
+An einer Veranstaltung werden verschiedene mögliche Aktivitäten angeboten, allerdings steht nicht genügend Zeit zur Verfügung, so dass jeder Teilnehmer nur an einer Aktivität teilnehmen kann. Der Veranstalter bittet die Teilnehmer in der Anmeldung, auf einem Formular alle Aktivitäten anzukreuzen, für die sie sich interessieren. Aus Kostengründen will der Veranstalter dann aber nur k Angebote auch realisieren, die dann auch genutzt werden sollen. Diese sollten zudem so sein, dass kein Teilnehmer sich für mehr als eines der realisierten Angebote angemeldet hat. Ausserdem ist ihm egal, dass möglicherweise einige Teilnehmer nichts tun
+werden.
+Das Veranstaltungs-Sekretariat soll jetzt die Aktivitäten ermitteln, die realisiert werden sollen.
+Dies stellt sich als schwierig heraus, warum?
+
+SET-PACKING Aktivitäten an einer Veranstaltung
+$i$ →Aktivität
+$S_i$ →Teilnehmer, die sich für $i$ angemeldet haben
+$k$ →Anzahl realisierte Aktivitäten
+$J$ →tatsächlich realisierte Aktivitäten
+$S_i$ ∩ $S_j$ = ∅∀$i$ $,$ $j$ → Teilnehmer sind für höchstens eine realisierte Aktivität angemeldet

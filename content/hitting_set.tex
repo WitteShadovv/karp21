@@ -1,0 +1,60 @@
+\section{Hitting-Set}
+\subsection{Expertenkomission}
+Aus einer Menge von Fachleuten, die zum Teil in mehreren Gebieten i = 1, . . . , n tätig sind, soll eine Expertenkommission gebildet werden. Da zwei Experten für das gleiche Fachgebiet sich erfahrungsgemäss immer streiten, will man in der Expertenkommission jedes Fachgebiet durch genau einen Experten vertreten haben. Können Sie einen effizienten Algorithmus zur Auswahl der Mitglieder der Kommission angeben?\\
+\\
+\textbf{Lösung}
+Das Problem ist Äquivalent zu HITTING-SET, ist also NP-vollständig. Nach aktuellem Wissen gibt es also keine effizienten Algorithmus, der das Problem lösen würde. Die Äquivalenz zu HITTING-SET wird durch die Abbildung vermittelt\\
+\\
+Experte $\rightarrow$ Punkt in S\\
+Fachgebiet i $\rightarrow$ Teilmenge $U_i$ aller Experten für dieses Gebiet\\
+Expertenkommission $\rightarrow$ Hitting Set H\\
+
+\subsection{Landesbewohner gruppieren}
+Die Bewohner eines Landes lassen sich nach einer grossen Zahl von Kriterien in Gruppen einteilen: nach Berufsgruppen, nach Altersgruppen, nach kulturellen Interessen, nach Hobbies usw. Jetzt soll eine Interessenvertretung gebildet werden so, dass jede dieser Gruppen mit genau einem Mitglied vertreten ist. Dabei ist es durchaus zulässig, dass die Gruppe der Raketenmodellbauer und die Gruppe der Freunde von Kammermusik von der gleichen Person vertreten werden. Aber es darf nicht sein, dass sich der Vertreter der Astrophotographen auch noch für Kammermusik interessiert, denn dann hätten die Kammermusikfreunde zwei Vertreter. Gibt es einen effizienten Algorithmus, der auch bei einer grossen Zahl von Bewohnern und Gruppierungen entscheiden kann, ob eine solche Zusammenstellung einer Interessenvertretung überhaupt möglich ist?\\
+\\
+\textbf{Lösung}
+Nein, denn das Problem ist NP-vollständig, wie wir gleich zeigen werden, nach unserem aktuellen Wissen also höchstwahrscheinlich nicht mit einem effizienten Algorithmus lösbar. Und gäbe es einen effizienten Algorithmus, würde dies automatisch P = NP zur Folge haben. Seien die $i$ $\in$ $I$ die Kriterien, nach denen gruppiert wird, und sei $S_i$ die Menge der Bewohner,S die zur Gruppe i gehört. Gesucht wird jetzt ein Teilmenge H $\subset$ $\bigcup_{i \in I} S_i$ von Interessenvertretern so, dass H mit jeder der Mengen S i genau einen Vertreter gemeinsam hat: |H $\cap$ S i | = 1 für alle i. Dies ist das Problem HITTING-SET.\\
+
+\subsection{Teambildung}
+Ein etwas unerfahrener Event-Manager hat sich für seinen nächsten Event ein Spiel einfallen lassen, für das er die Gäste in Teams mit jeweils drei Mitgliedern einteilen muss. Damit die Bildung der Teams schnell vonstatten gehen kann, schickt er den Teilnehmern die Team-Nummer bereits mit der Einladung. Dummerweise lässt die Datenqualität seiner Adressdatenbank sehr zu wünschen übrig. Die meisten Teilnehmer bekommen mehrere Einladungen, mit verschiedenen Team-Nummern. Am Event kommt es zum Eklat. Der Manager versucht die Situation noch zu retten, indem er den Teilnehmern sagt, sie sollen die Dreierteams einfach mit einer der Teamnummern bilden, mit welcher spiele keine Rolle. Die Teilnehmer finden jedoch keine Lösung, der Event platzt, einige Teilnehmer gehen frühzeitig nach Hause, andere ersäufen ihren Frust an der Bar. Warum ist es so schwierig, nach Anweisung des Managers Teams zubilden?
+\\
+\textbf{Lösung}
+Dieses Problem, welches wir TEAMBILDUNG nennen wollen, ist NP-vollständig, wie wir durch Vergleich mit dem bekanntermassen NP-vollständigen Problem EXACT-COVER nachweisen wollen. Je der vom Manager verschickten Nummern j definiert eine Teilmenge $S_j$ der Menge aller Teilnehmer U. Gesucht ist eine Unterfamilie Teams S j i , 1 ≤ i ≤ m, so dass keine zwei Teams sich überschneiden (d. h. kein Teilnehmer ist in mehr als einem Team) und die ganze Menge U überdecken (d. h. jeder Teilnehmer ist in einem Team). \\
+\\
+Reduktion auf HITTING-SET: Dazu bildet man für jeden Teilnehmer i die Menge S i der Teams, für die Teilnehmer i vorgesehen ist. Es ist klar, dass S i ⊂ S , wobei S die Menge aller Teams ist. Gesucht ist jetzt eine Auswahl von Teams so, dass jeder Teilnehmer in genau einem Team ist, also H ⊂ S so, dass |H ∩ S i | = 1. Das ist das Problem HITTING-SET.
+
+\subsection{Selten bestiegene Gipfel}
+Eine Zeitschrift für Alpinisten möchte eine Artikelserie über selten bestiegene Berggipfel veröffentlichen. Sie hat bereits eine Liste von Gipfeln zusammengestellt und bittet jetzt einen Alpinistenverein um eine Liste von Alpinisten als mögliche Interviewpartner, die über ihre Erfahrung beim Besteigen dieser Gipfel berichten können. Um Mehrspurigkeiten aus dem Weg zu gehen, soll kein Alpinist auf der Liste mehr als einen der aufgelisteten Gipfel bestiegen haben. Dem Verein fällt es sehr schwer, eine solche Liste zusammenzustellen, woran könnte das liegen?\\
+\\
+\textbf{Lösung}
+Dies ist das Problem HITTING-SET. Die Liste der Gipfel ist die Menge I. Die Menge $S_i$ besteht aus allen Vereinsmitgliedern, die den Gipfel i bestiegen haben.\\
+Liste der Gipfel ↔ I\\
+Besteiger von Gipfel i ↔ S i\\
+Alle in Frage kommenden Mitglieder ↔ S = $\bigcup_{i \in I} S_i$\\
+\\
+Ausgewählte Besteiger ↔ H
+
+\subsection{Softwareentwicklungsprojekt}
+
+Ein grosses Softwareentwicklungsprojekt ist wegen der aus dem Ruder gelaufenen Kosten.
+gezwungen, zu redimensionieren. Zu diesem Zweck stellt der Projektleiter eine Liste von Skills
+zusammen, die er nach der Entlassungswelle in seinem Team noch haben muss und kämpft nun
+seit Tagen damit, ein Auswahl von Mitarbeitern zu finden, in der jeder Skill in genau einem
+Teammitglied vertreten ist. Warum fällt ihm das so schwer?
+
+Lösung. Dies ist das Problem HITTING-SET. Wir bezeichnen die Skills mit $i \in I, S_i$ ist die
+Menge der Team-Mitglieder, die Skill $i$ haben. Gesucht ist eine Menge
+
+$$H \subset \bigcup_{i\in I}S_i$$
+
+derart, dass $|H \cap S_i| = 1$ für jeden Skill. Wir haben also eine 1-1-Reduktion
+
+\begin{itemize}
+\item Skills ↔ I
+\item Skill ↔ i
+\item Teammitglieder mit Skill i ↔ S i
+\item neues Team ↔ H
+\end{itemize}
+
+Da HITTING-SET NP-vollständig ist, muss davon ausgegangen werden, dass es keinen Algo-
+rithmus mit polynomieller Laufzeit zur Bestimmung der Menge H gibt. 
