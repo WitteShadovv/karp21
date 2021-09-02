@@ -1,5 +1,5 @@
 ## Template for a very compact LaTeX Cheatsheet
 
-![page 1](https://i.stack.imgur.com/jEcrv.png)
+This project includes a list of Karp's problems and some other things we found helpful for our exam in "Automaten und Sprachen".
 
-![page 2](https://i.stack.imgur.com/jq4dI.png)
+![PDF of Karp's problems](https://github.com/WitteShadovv/karp21/blob/master/karp21.pdf)
