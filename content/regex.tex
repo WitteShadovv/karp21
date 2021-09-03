@@ -5,7 +5,7 @@ L: Die passenden Strings sind Datumsangaben, drei Zahlen getrennt durch /. Die l
 Zahl ist die Jahreszahl.
 \subsection{Finde Regex}
 Finde einen regulären Ausdruck, mit dem man Jahreszahlen zwischen 1800 und 2199 in einem historischen Dokument finden kann. Jahreszahlen sind vierstellig und wenn sie im Inneren eines Strings vorkommen, müssen Sie mit Leerzeichen begrenzt sein. \\
-L: (.* )?((18|19|20|21)[0-9]{2})( .*)?
+L: (.* )?((18|19|20|21)[0-9]\{2\})( .*)?
 
 \subsection{Billig Regex}
 Geben Sie einen regulären Ausdruck an, der auf alle Wörter mit genau 10 Zeichen passt und den String AutoSpr enthält. \\
@@ -17,7 +17,7 @@ Zurich (ZRH) Switzerland
 San Francisco (SFO) USA
 Sydney (SYD) Australia
 Auckland (AKL) New Zealand \\
-L: [A-Za-z][A-Za-z ]+ ([A-Z]{3}) *[A-Za-z][A-Za-z ]*
+L: [A-Za-z][A-Za-z ]+ ([A-Z]\{3\}) *[A-Za-z][A-Za-z ]*
 \subsection{C Comments}
 Kommentare in der Programmiersprache C werden von /* und */ eingerahmt und können nichtgeschachtelt werden. Zwischen den Kommentarzeichen kann jedes beliebige Zeichen vorkommen. Finden Sie einen regulären Ausdruck, der einen C-Kommentar erkennt.
 L: \includegraphics[width=\columnwidth]{img/cregex.png}
